@@ -1,0 +1,6 @@
+name: Bungee-Online-Time-Extension-For-PAF
+version: ${project.version}
+author: Simonsator
+depends: [PartyAndFriends, BungeeOnlineTime]
+main: de.simonsator.partyandfriends.extensions.bungeeonlinetime.BOTPlugin
+description: An add-on for party and friends
