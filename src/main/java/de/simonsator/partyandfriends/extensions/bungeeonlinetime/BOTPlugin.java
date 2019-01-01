@@ -39,12 +39,12 @@ public class BOTPlugin extends PAFExtension implements Listener {
 	public void onPartyInvite(InviteEvent pEvent) {
 		try {
 			if (getConfig().getLong("Party.Invite.MinOnlineTime") > 0) {
-				if (BungeeOnlineTime.mysql.getOnlineTime(pEvent.getExecutor().getUniqueId(), 0) < getConfig().getLong("Party.Invite.MinOnlineTime")) {
-					pEvent.getCaller().sendError(pEvent.getExecutor(), new TextComponent(PartyCommand.getInstance().getPrefix() + getConfig().getString("Party.Invite.NotOnlineLongEnough")));
+				if (BungeeOnlineTime.SQL.getOnlineTime(pEvent.getExecutor().getUniqueId()).getTime() < getConfig().getLong("Party.Invite.MinOnlineTime")) {
+					pEvent.getExecutor().sendMessage(PartyCommand.getInstance().getPrefix() + getConfig().getString("Party.Invite.NotOnlineLongEnough"));
 					pEvent.setCancelled(true);
 				}
 			}
-		} catch (SQLException | ClassNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -53,18 +53,18 @@ public class BOTPlugin extends PAFExtension implements Listener {
 	public void onFriendCommand(FriendshipCommandEvent pEvent) {
 		try {
 			if (pEvent.getCaller().getClass().equals(Add.class) && getConfig().getLong("Friends.Add.MinOnlineTime") > 0) {
-				if (BungeeOnlineTime.mysql.getOnlineTime(pEvent.getExecutor().getUniqueId(), 0) < getConfig().getLong("Friends.Add.MinOnlineTime")) {
-					pEvent.getCaller().sendError(pEvent.getExecutor(), new TextComponent(Friends.getInstance().getPrefix() + getConfig().getString("Friends.Add.NotOnlineLongEnough")));
+				if (BungeeOnlineTime.SQL.getOnlineTime(pEvent.getExecutor().getUniqueId()).getTime() < getConfig().getLong("Friends.Add.MinOnlineTime")) {
+					pEvent.getExecutor().sendMessage(Friends.getInstance().getPrefix() + getConfig().getString("Friends.Add.NotOnlineLongEnough"));
 					pEvent.setCancelled(true);
 				}
 			}
 			if (pEvent.getCaller().getClass().equals(Accept.class) && getConfig().getLong("Friends.Accept.MinOnlineTime") > 0) {
-				if (BungeeOnlineTime.mysql.getOnlineTime(pEvent.getExecutor().getUniqueId(), 0) < getConfig().getLong("Friends.Accept.MinOnlineTime")) {
-					pEvent.getCaller().sendError(pEvent.getExecutor(), new TextComponent(Friends.getInstance().getPrefix() + getConfig().getString("Friends.Accept.NotOnlineLongEnough")));
+				if (BungeeOnlineTime.SQL.getOnlineTime(pEvent.getExecutor().getUniqueId()).getTime() < getConfig().getLong("Friends.Accept.MinOnlineTime")) {
+					pEvent.getExecutor().sendMessage(Friends.getInstance().getPrefix() + getConfig().getString("Friends.Accept.NotOnlineLongEnough"));
 					pEvent.setCancelled(true);
 				}
 			}
-		} catch (SQLException | ClassNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
