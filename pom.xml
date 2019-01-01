@@ -31,8 +31,8 @@
 			<url>http://simonsator.de/repo</url>
 		</repository>
 		<repository>
-			<id>Bungee Repo</id>
-			<url>http://repo.md-5.net/content/groups/public/</url>
+			<id>bungeecord-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</repository>
 	</repositories>
 	<dependencies>
@@ -44,21 +44,12 @@
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
-			<version>1.12-SNAPSHOT</version>
-			<type>jar</type>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>1.12-SNAPSHOT</version>
-			<type>javadoc</type>
-			<scope>provided</scope>
+			<version>LATEST</version>
 		</dependency>
 		<dependency>
 			<groupId>lu.r3flexi0n</groupId>
 			<artifactId>BungeeOnlineTime</artifactId>
-			<version>5.5</version>
+			<version>7.0</version>
 		</dependency>
 	</dependencies>
 </project>
