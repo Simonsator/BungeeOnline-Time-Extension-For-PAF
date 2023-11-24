@@ -28,7 +28,7 @@
 	<repositories>
 		<repository>
 			<id>Simonsators-Repo</id>
-			<url>http://simonsator.de/repo</url>
+			<url>https://simonsator.de/repo</url>
 		</repository>
 		<repository>
 			<id>bungeecord-repo</id>
@@ -39,17 +39,19 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.67</version>
+			<version>1.0.92</version>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
-			<version>LATEST</version>
+			<version>1.19-R0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>lu.r3flexi0n</groupId>
 			<artifactId>BungeeOnlineTime</artifactId>
-			<version>7.0</version>
+			<version>8.3</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -1,5 +1,6 @@
 package de.simonsator.partyandfriends.extensions.bungeeonlinetime.configuration;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 import net.md_5.bungee.api.plugin.Plugin;
 
@@ -7,8 +8,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class BOTConfig extends ConfigurationCreator {
-	public BOTConfig(File file, Plugin pPlugin) throws IOException {
-		super(file, pPlugin);
+	public BOTConfig(File file, PAFExtension pPlugin) throws IOException {
+		super(file, pPlugin, true);
 		readFile();
 		loadDefaults();
 		saveFile();
