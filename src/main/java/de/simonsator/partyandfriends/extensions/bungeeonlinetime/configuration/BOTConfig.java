@@ -18,10 +18,10 @@ public class BOTConfig extends ConfigurationCreator {
 
 	private void loadDefaults() {
 		set("Friends.Add.MinOnlineTime", 60);
-		set("Friends.Add.NotOnlineLongEnough", " &7You need to have been at least 1 minute online to use this command.");
+		set("Friends.Add.NotOnlineLongEnough", " &7You need to have been at least 60 minute online to use this command.");
 		set("Friends.Accept.MinOnlineTime", 60);
-		set("Friends.Accept.NotOnlineLongEnough", " &7You need to have been at least 1 minute online to use this command.");
+		set("Friends.Accept.NotOnlineLongEnough", " &7You need to have been at least 60 minute online to use this command.");
 		set("Party.Invite.MinOnlineTime", 60);
-		set("Party.Invite.NotOnlineLongEnough", " &7You need to have been at least 1 minute online to use this command.");
+		set("Party.Invite.NotOnlineLongEnough", " &7You need to have been at least 60 minute online to use this command.");
 	}
 }
